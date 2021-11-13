@@ -38,4 +38,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          tags: {{ YOUR_DOCKERHUB_REPOSITORY }}/techtrends:latest
+          tags: sumanbgl1/techtrends:latest

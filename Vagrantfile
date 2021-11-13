@@ -10,6 +10,11 @@ Vagrant.configure("2") do |config|
 
   # st the static IP for the vagrant box
   config.vm.network "private_network", ip: "192.168.50.4"
+
+  config.vm.define "master" do |master|
+    # do stuff
+    master.vm.network "forwarded_port", guest: 6111, host: 6111 # Kubectl API Access
+  end
   
   # consifure the parameters for VirtualBox provider
   config.vm.provider "virtualbox" do |vb|
